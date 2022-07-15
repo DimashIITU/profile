@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220708112550">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220715105011">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,11 +21,11 @@
 				</a>
 				<nav class="header__navigate">
 					<ul data-da=".menu__body, 768" class="header__list">
-						<li class="header__item"><a href="" class="header__link">Home</a></li>
-						<li class="header__item"><a href="" class="header__link">About us</a></li>
-						<li class="header__item"><a href="" class="header__link">Find space</a></li>
-						<li class="header__item"><a href="" class="header__link">Share space</a></li>
-						<li class="header__item"><a href="" class="header__link">Promote space</a></li>
+						<li data-goto="#home" data-goto-header class="header__item"><a href="" class="header__link">Home</a></li>
+						<li data-goto="#partners" data-goto-header class="header__item"><a href="" class="header__link">About us</a></li>
+						<li data-goto="#gallery" data-goto-header class="header__item"><a href="" class="header__link">Find space</a></li>
+						<li data-goto="#about" data-goto-header class="header__item"><a href="" class="header__link">Share space</a></li>
+						<li data-goto="#choose" data-goto-header class="header__item"><a href="" class="header__link">Promote space</a></li>
 					</ul>
 					<div class="header__menu menu">
 						<button type="button" class="menu__icon icon-menu"><span></span></button>
@@ -37,7 +37,7 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="page__main main-page">
+			<section id="home" class="page__main main-page">
 				<div class="main-page__container">
 					<div class="main-page__content">
 						<h1 class="main-page__title">
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 			</section>
-			<section data-watch data-watch-once data-watch-threshold='0.5' class="page__partners partners-page">
+			<section id="partners" data-watch data-watch-once data-watch-threshold='0.5' class="page__partners partners-page">
 				<div class="partners-page__container">
 					<a class="partners-page__item partners-page__item_1">
 						<img src="img/icons/partner_1.svg" alt="partner">
@@ -149,7 +149,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__about about-page">
+			<section id="gallery" class="page__about about-page">
 				<div data-watch data-watch-once data-watch-threshold='0.5' class="page__product product-page">
 					<div class="product-page__container">
 						<div class="product-page__img-ibg">
@@ -177,7 +177,7 @@
 				</div>
 				<div class="about-page__bc">
 				</div>
-				<div data-watch data-watch-once data-watch-threshold='0.5' class="page__serve serve-page">
+				<div id="about" data-watch data-watch-once data-watch-threshold='0.5' class="page__serve serve-page">
 					<div class="serve-page__container">
 						<div class="serve-page__content">
 							<h2 class="serve-page__title">
@@ -220,7 +220,7 @@
 					</div>
 				</div>
 			</section>
-			<section data-watch data-watch-once data-watch-threshold='0.5' class="page__choose choose-page">
+			<section id="choose" data-watch data-watch-once data-watch-threshold='0.5' class="page__choose choose-page">
 				<div class="choose-page__container">
 					<h2 class="choose-page__title">
 						Why choose us?
@@ -432,7 +432,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220708112550"></script>
+	<script src="js/app.min.js?_v=20220715105011"></script>
 </body>
 
 </html>
