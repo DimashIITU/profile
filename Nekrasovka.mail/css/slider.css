@@ -1,0 +1,117 @@
+/* Слайдер */
+.slider {
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+.slide__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+/* Стрелка */
+.slider .slick-arrow {
+    position: absolute;
+    top: 40%;
+    z-index: 10;
+    font-size: 0;
+    width: 70px;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+}
+/* Стрелка влево */
+.slider .slick-arrow.slick-prev{
+    left: 20px;
+    background: url('../img/slider/Left.png') 0 0 / 100% no-repeat;
+}
+/* Стрелка вправо */
+.slider .slick-arrow.slick-next{
+    right: 20px;
+    background: url('../img/slider/Right.png') 0 0 / 100% no-repeat;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+}
+
+/* Точки (булиты) */
+.slider .slick-dots{
+    width: 100%;
+    bottom: 20px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider .slick-dots li{
+    list-style: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+/* Активная точка */
+.slider .slick-dots li.slick-active {
+    border: 4px solid #FF5229;
+    border-radius: 50%;
+}
+/* Элемент точки */
+.slider .slick-dots button{
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    outline: none;
+    display: flex;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    border: none;
+}
+
+
+/* Media ============================================================> */
+@media(max-width:1400px) {
+    /* Стрелка */
+    .slider .slick-arrow {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Активная точка */
+    .slider .slick-dots li.slick-active {
+        border: 3px solid #FF5229;
+    }
+    /* Элемент точки */
+    .slider .slick-dots button{
+        width: 12px;
+        height: 12px;
+    }
+
+}
+@media(max-width:650px) {
+    /* Стрелка */
+    .slider .slick-arrow {
+        width: 30px;
+        height: 30px;
+    }
+    /* Стрелка влево */
+    .slider .slick-arrow.slick-prev{
+        left: 10px;
+    }
+    /* Стрелка вправо */
+    .slider .slick-arrow.slick-next{
+        right: 10px;
+    }
+    /* Активная точка */
+    .slider .slick-dots li.slick-active {
+        border: 0px solid #FF5229;
+    }
+    /* Элемент точки */
+    .slider .slick-dots button{
+        width: 0px;
+        height: 0px;
+    }
+}

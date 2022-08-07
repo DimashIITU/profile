@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет магазин</title>
+
+    <!-- Default Css -->
+    <link rel="stylesheet" href="css/default.css">
+    <!-- Fonts Css -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- Header Css -->
+    <link rel="stylesheet" href="css/header.css">
+    <!-- Slider Css -->
+    <link rel="stylesheet" href="css/slider.css">
+    <!-- Content Css -->
+    <link rel="stylesheet" href="css/content.css">
+    <!-- Footer Css -->
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="js/slick.min.js"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header =============================================> -->
+    <header class="header">
+        <div class="container">
+            
+            <div class="header__inner">
+                <!-- Logo -->
+                <a href="#" class="header__logo">
+                    <img src="img/logo.png" alt="Logo">
+                </a>
+
+                <!-- Header Navs -->
+                <nav class="header__navs">
+                    <!-- Header Info -->
+                    <ul class="header__info">
+                        <li>
+                            <div href="#" class="header__info-link">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Москва, ул. Липчанского, 4
+                            </div>
+                        </li>
+                        <li>
+                            <div href="#" class="header__info-link">
+                                <i class="fa-solid fa-calendar"></i>                                
+                                10:00 - 21:00 <span>(без входных)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href="#" class="header__info-link">
+                                <i class="fa-solid fa-phone"></i>                               
+                               +7 (977) 275-45-46
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Header Contact -->
+                    <ul class="header__contacts">
+                        <li>
+                            <a href="#" class="header__contacts-link">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__contacts-link">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__contacts-link">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__contacts-link">
+                                <i class="fa-brands fa-vk"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__contacts-link">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__contacts-link">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+        <!-- Header Bread -->
+        <div class="header__bread">
+            <div class="container">       
+    
+                <div class="header__bread-inner">
+                    <button class="header__bread-btn" id="header__burger">
+                        <i class="fa-solid fa-bars-staggered i-open"></i>
+                        <i class="fa-solid fa-xmark i-close"></i>
+                        Каталог товаров
+                    </button>
+    
+                    <!-- Header Search -->
+                    <div class="header__search">
+                        <input type="text" placeholder="🔍  Поиск">
+                    </div>
+    
+                    <!-- Header Menu -->
+                    <ul class="header__menu">
+                        <li>
+                            <button onclick="setScrollToOptions(500)" class="header__link">Новинки</button>
+                        </li>
+                        <li>
+                            <button onclick="setScrollToOptions(1000)" class="header__link">Акции и скидки</button>
+                        </li>
+                        <li>
+                            <button onclick="setScrollToOptions(1600)" class="header__link">О компании</button>
+                        </li>
+                        <li>
+                            <button onclick="setScrollToOptions(2350)" class="header__link">Контакты</button>
+                        </li>
+                    </ul>
+                </div>
+    
+            </div>    
+            
+        </div>
+
+        <div class="menu" id="menu">
+            <div class="container">
+                <div class="menu__inner">
+                    <ul class="menu__main">
+                        <li>
+                            <i class="fa-solid fa-align-justify"></i>
+                            <a href="#" class="menu__main-link">Все категории</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <a href="#" class="menu__main-link">Смартфоны и гаджеты</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-laptop"></i>
+                            <a href="#" class="menu__main-link">Ноудбуки и компьютеры</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-gamepad"></i>
+                            <a href="#" class="menu__main-link">Все для геймеров</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-bath"></i>                            
+                            <a href="#" class="menu__main-link">Бытовая техника</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-blender"></i>
+                            <a href="#" class="menu__main-link">Техника для кухни</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-baseball-bat-ball"></i>
+                            <a href="#" class="menu__main-link">Спорт, туризм, багаж</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-car"></i>                            
+                            <a href="#" class="menu__main-link">Автотовары и транспорт</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-baby-carriage"></i>
+                            <a href="#" class="menu__main-link">Детские товары</a>
+                        </li>
+                    </ul>
+
+                    <!-- Menu Categories -->
+                    <ul class="menu__categories">
+                        <li>
+                            <a href="#" class="menu__categories-link">Смартфоны и гаджеты</a>
+                            <ul class="menu__categories-dropdown">
+                                <li>
+                                    <a href="#">Смартфоны</a>
+                                </li>
+                                <li>
+                                    <a href="#">Смартфоны Apple</a>
+                                </li>
+                                <li>
+                                    <a href="#">Смартфоны Samsung</a>
+                                </li>
+                                <li>
+                                    <a href="#">Смартфоны Huawei</a>
+                                </li>
+                                <li>
+                                    <a href="#">Смартфоны Xiaomi</a>
+                                </li>
+                                <li>
+                                    <a href="#">Смартфоны OPPO</a>
+                                </li>
+                                <li>
+                                    <a href="#">Смартфоны Vivo</a>
+                                </li>
+                                <li>
+                                    <a href="#">Смартфоны Poco</a>
+                                </li>
+                                <li>
+                                    <a href="#">Мобильные телефоны</a>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="menu__categories-link">Планшеты и электронные книги</a>
+                            <ul class="menu__categories-dropdown">
+                                <li>
+                                    <a href="#">Планшеты</a>
+                                </li>
+                                <li>
+                                    <a href="#">Планшеты Samsung</a>
+                                </li>
+                                <li>
+                                    <a href="#">Планшеты Apple iPad</a>
+                                </li>
+                                <li>
+                                    <a href="#">Аксессуары для iPad</a>
+                                </li>
+                                <li>
+                                    <a href="#">Чехлы для планшетов</a>
+                                </li>
+                                <li>
+                                    <a href="#">Аксессуары для планшетов</a>
+                                </li>
+                                <li>
+                                    <a href="#">Электронные книги</a>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="menu__categories-link">Программное обеспечение</a>
+                            <ul class="menu__categories-dropdown">
+                                <li>
+                                    <a href="#">Антивирусы и безопасность для смартфонов</a>
+                                </li>
+                                <li>
+                                    <a href="#">Офисные программы для смартфонов</a>
+                                </li>
+                                <li>
+                                    <a href="#">Учеба и развитие для смартфонов</a>
+                                </li>
+                                <li>
+                                    <a href="#">Цифровой контент для смартфонов</a>
+                                </li>
+                                <li>
+                                    <a href="#">Удаленный сервис для смартфонов</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="menu__categories-link">Гаджеты</a>
+                            <ul class="menu__categories-dropdown">
+                                <li>
+                                    <a href="#">Смарт часы</a>
+                                </li>
+                                <li>
+                                    <a href="#">Apple Watch</a>
+                                </li>
+                                <li>
+                                    <a href="#">Смарт часы Samsung</a>
+                                </li>
+                                <li>
+                                    <a href="#">Смарт часы Huawei</a>
+                                </li>
+                                <li>
+                                    <a href="#">Смарт часы Xiaomi</a>
+                                </li>
+                                <li>
+                                    <a href="#">Аксессуары для смарт часов</a>
+                                </li>
+                                <li>
+                                    <a href="#">Фитнес браслеты</a>
+                                </li>
+                                <li>
+                                    <a href="#">Детские часы с GPS</a>
+                                </li>
+                                <li>
+                                    <a href="#">Экшн-камеры</a>
+                                </li>
+                                <li>
+                                    <a href="#">Аксессуары для экшн камер</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bluetooth-трекер</a>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="menu__categories-link">Аксессуары для телефона</a>
+                            <ul class="menu__categories-dropdown">
+                                <li>
+                                    <a href="#">Портативные колонки</a>
+                                </li>
+                                <li>
+                                    <a href="#">Внешние аккумуляторы</a>
+                                </li>
+                                <li>
+                                    <a href="#">Чехлы</a>
+                                </li>
+                                <li>
+                                    <a href="#">Защита экрана</a>
+                                </li>
+                                <li>
+                                    <a href="#">Карты памяти</a>
+                                </li>
+                                <li>
+                                    <a href="#">Зарядные устройства</a>
+                                </li>
+                                <li>
+                                    <a href="#">Кабели и адаптеры для смартфонов</a>
+                                </li>
+                                <li>
+                                    <a href="#">Мобильная оптика</a>
+                                </li>
+                                <li>
+                                    <a href="#">Подставки</a>
+                                </li>
+                                <li>
+                                    <a href="#">Селфи моноподы</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стабилизаторы (Стедикамы)</a>
+                                </li>
+                                <li>
+                                    <a href="#">Стилусы</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="menu__categories-link">Наушники</a>
+                            <ul class="menu__categories-dropdown">
+                                <li>
+                                    <a href="#">AirPods</a>
+                                </li>
+                                <li>
+                                    <a href="#">Наушники Xiaomi</a>
+                                </li>
+                                <li>
+                                    <a href="#">Беспроводные</a>
+                                </li>
+                                <li>
+                                    <a href="#">Проводные</a>
+                                </li>
+                                <li>
+                                    <a href="#">Все наушники</a>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="menu__categories-link">Умный дом</a>
+                            <ul class="menu__categories-dropdown">
+                                <li>
+                                    <a href="#">Умный дом Xiaomi</a>
+                                </li>
+                                <li>
+                                    <a href="#">Управление для умного дома</a>
+                                </li>
+                                <li>
+                                    <a href="#">Пульты управления для умного дома</a>
+                                </li>
+                                <li>
+                                    <a href="#">Умные лампы</a>
+                                </li>
+                                <li>
+                                    <a href="#">Умные розетки</a>
+                                </li>
+                                <li>
+                                    <a href="#">Датчики</a>
+                                </li>
+                                <li>
+                                    <a href="#">Яндекс (Алиса)</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Slider =============================================> -->
+        <div class="slider">
+            <a href="#" class="slider__item">
+                <img src="img/slider/1.jpg" class="slide__img">
+            </a>
+            <a href="#" class="slider__item">
+                <img src="img/slider/2.jpg" class="slide__img">
+            </a>
+            <a href="#" class="slider__item">
+                <img src="img/slider/7.jpg" class="slide__img">
+            </a>
+            <a href="#" class="slider__item">
+                <img src="img/slider/8.jpg" class="slide__img">
+            </a>
+            <a href="#" class="slider__item">
+                <img src="img/slider/9.jpg" class="slide__img">
+            </a>
+            <a href="#" class="slider__item">
+                <img src="img/slider/10.jpg" class="slide__img">
+            </a>
+            <a href="#" class="slider__item">
+                <img src="img/slider/11.jpg" class="slide__img">
+            </a>
+            <a href="#" class="slider__item">
+                <img src="img/slider/12.jpg" class="slide__img">
+            </a>
+        </div>
+    </div>
+
+    <!-- Content =============================================> -->
+    <div class="content">
+        <div class="container">
+
+            <!-- Banner -->
+            <div class="banner">
+                <h1 class="title">Новинки</h1>
+                <nav class="banner__navs">
+                    <a href="#" class="banner__btn">
+                        Все новинки 
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Products -->
+            <div class="products">
+
+                <a href="#" class="product">
+                    <img src="img/instagram/3.png" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+                <a href="#" class="product">
+                    <img src="img/products/2.png" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+                <a href="#" class="product">
+                    <img src="img/products/3.jpg" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+                <a href="#" class="product">
+                    <img src="img/products/1.png" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+                <a href="#" class="product">
+                    <img src="img/instagram/4.png" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+                <a href="#" class="product">
+                    <img src="img/instagram/6.png" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+
+            </div>
+
+            <!-- Banner -->
+            <div class="banner">
+                <h1 class="title">Товары со скидкой</h1>
+                <nav class="banner__navs">
+                    <a href="#" class="banner__btn">
+                        Перейти в каталог
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Banner Image -->
+            <img src="img/Скидки.png" class="banner__img">
+
+            <!-- Products -->
+            <div class="products">
+                <a href="#" class="product">
+                    <span class="is__discount">Скидка</span>
+                    <img src="img/products/1.png" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+                <a href="#" class="product">
+                    <span class="is__discount">Скидка</span>
+                    <img src="img/products/1.png" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+                <a href="#" class="product">
+                    <span class="is__discount">Скидка</span>
+                    <img src="img/products/1.png" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+                <a href="#" class="product">
+                    <span class="is__discount">Скидка</span>
+                    <img src="img/products/1.png" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+                <a href="#" class="product">
+                    <span class="is__discount">Скидка</span>
+                    <img src="img/products/1.png" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+                <a href="#" class="product">
+                    <span class="is__discount">Скидка</span>
+                    <img src="img/products/1.png" class="product__img">
+                    <h1 class="product__title">Кружка "Люблю", 380 мл в ассортименте</h1>
+                    <p class="product__price">200₽</p>
+                </a>
+            </div>
+
+            <!-- About US -->
+            <div class="about__us">
+                <div class="about__us-item">
+
+                    <h1 class="title">Nekrasovka.mall - товары для всей семьи на все случаи жизни</h1>
+                    <p class="about__txt">
+                        Предлагаем вам самый широкий ассортимент товаров повседневного спроса, которые помогают в хозяйстве и делают жизнь намного проще и приятней
+                    </p>
+
+                    <!-- About Us Container -->
+                    <div class="about__container">
+                        <div class="abount__container-item">
+                            <img src="img/shopping-cart.svg" alt="">
+                            <p>Свыше 4000 наименований товаров в ассортименте</p>
+                        </div>
+
+                        <div class="abount__container-item">
+                            <img src="img/box-tick.svg" alt="">
+                            <p>Только качественные и полезные товары для вашего дома</p>
+                        </div>
+
+                        <div class="abount__container-item">
+                            <img src="img/empty-wallet-tick.svg" alt="">
+                            <p>Возможность оплаты любым удобным для вас способом</p>
+                        </div>
+
+                        <div class="abount__container-item">
+                            <img src="img/group.svg" alt="">
+                            <p>Работа с поставщиками напрямую, за счет чего цены не завышены</p>
+                        </div>
+                    </div>
+                        
+                </div>
+
+                <!-- About Us IMG -->
+                <img src="img/about__img.png" class="about__img">
+            </div>
+
+            <!-- Banner -->
+            <div class="banner">
+                <h1 class="title">Подписывайтесь на нас в Instagram</h1>
+                <nav class="banner__navs">
+                    <a href="#" class="banner__btn">
+                        Подписаться
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- FOUR GRID -->
+            <div class="four__grid">
+                <img src="img/instagram/1.png" alt="" class="four__grid-img">
+                <img src="img/instagram/2.png" alt="" class="four__grid-img">
+                <img src="img/instagram/3.png" alt="" class="four__grid-img">
+                <img src="img/instagram/4.png" alt="" class="four__grid-img">
+                <img src="img/instagram/5.png" alt="" class="four__grid-img">
+                <img src="img/instagram/6.png" alt="" class="four__grid-img">
+                <img src="img/instagram/7.png" alt="" class="four__grid-img">
+                <img src="img/instagram/8.png" alt="" class="four__grid-img">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer =============================================> -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer__inner">
+                <div class="footer__item">
+                    <!-- Footer Logo -->
+                    <a href="#" class="footer__logo">
+                        <img src="img/logo.png" alt="">
+                    </a>
+
+                    <p class="footer__txt">Политика конфидецальности</p>
+                </div>
+
+                <div class="footer__item">
+                    <!-- Footer Menu -->
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#" class="footer__link">
+                                Адрес магазина
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Акции и скидки
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Новинки
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                О компании
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__item">
+                    <a href="#" class="footer__phone">
+                        <i class="fa-solid fa-phone"></i>
+                        +7 (977) 275-45-46
+                    </a>
+
+                    <!-- Footer Contacts -->
+                    <ul class="footer__contacts">
+                        <li>
+                            <a href="#" class="footer__contacts-link">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__contacts-link">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__contacts-link">
+                                <i class="fa-brands fa-viber"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__contacts-link">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__contacts-link">
+                                <i class="fa-brands fa-vk"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__contacts-link">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__contacts-link">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <a href="#" class="footer__link-secondary">
+                        tungatarov3@mail.ru
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Header Js -->
+    <script src="js/header.js"></script>
+    <!-- Scroll Js -->
+    <script src="js/scroll.js"></script>
+    <!-- Slider Js -->
+    <script src="js/slider.js"></script>
+</body>
+</html>

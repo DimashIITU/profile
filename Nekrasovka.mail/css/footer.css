@@ -1,0 +1,199 @@
+/* Footer ============================================================> */
+.footer {
+    width: 100%;
+    height: 100%;
+    background: #F7F7F7;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__item {
+    width: auto;
+}
+
+/* Footer Logo ===============> */
+.footer__logo {
+    text-decoration: none;
+    cursor: pointer;
+}
+.footer__logo > img {
+    height: 100px;
+}
+
+.footer__txt {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-top: 20px;
+    color: #20202075;
+}
+
+/* Footer Menu ===============> */
+.footer__menu {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+.footer__link {
+    font-size: 18px;
+    cursor: pointer;
+    color: #202020;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__phone {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 5px;
+    color: #202020;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer__phone > i {
+    color: #FF5229;
+}
+
+/* Footer Contacts ==============> */
+.footer__contacts {
+    display: flex;
+    list-style: none;
+    grid-gap: 10px;
+    cursor: pointer;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+.footer__contacts-link {
+    text-decoration: none;
+    color: #20202075;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s ease all;
+}
+.footer__contacts-link:hover {
+    color: #FF5229;
+}
+
+.footer__link-secondary {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: #20202075;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer__link-secondary:hover {
+    text-decoration: underline;
+}
+
+/* Media ============================================================> */
+@media(max-width:1200px) {
+    /* Footer ============================================================> */
+    .footer {
+        padding: 20px 0;
+    }
+
+    /* Footer Logo ===============> */
+    .footer__logo > img {
+        height: 60px;
+    }
+
+    .footer__txt {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    /* Footer Menu ===============> */
+    .footer__menu {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .footer__link {
+        font-size: 16px;
+    }
+ 
+    .footer__phone {
+        font-size: 16px;
+    }
+    .footer__phone > i {
+        color: #FF5229;
+    }
+
+    /* Footer Contacts ==============> */
+    .footer__contacts {
+        grid-gap: 5px;
+        margin: 10px 0;
+    }
+    .footer__contacts-link {
+        font-size: 18px;
+    }
+ 
+    .footer__link-secondary {
+        font-size: 16px;
+    }
+}
+@media(max-width:650px) {
+    /* Footer ============================================================> */
+    .footer__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        grid-gap: 25px;
+    }
+
+    /* Footer Logo ===============> */
+    .footer__logo > img {
+        height: 60px;
+    }
+
+    .footer__txt {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    /* Footer Menu ===============> */
+    .footer__menu {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .footer__link {
+        font-size: 16px;
+    }
+ 
+    .footer__phone {
+        font-size: 16px;
+    }
+    .footer__phone > i {
+        color: #FF5229;
+    }
+
+    /* Footer Contacts ==============> */
+    .footer__contacts {
+        grid-gap: 5px;
+        margin: 10px 0;
+    }
+    .footer__contacts-link {
+        font-size: 18px;
+    }
+ 
+    .footer__link-secondary {
+        font-size: 16px;
+    }
+}
