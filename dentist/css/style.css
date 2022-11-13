@@ -191,7 +191,7 @@ h6 {
   position: relative;
 }
 
-.page > img {
+#change {
   position: absolute;
   width: 100%;
   height: 100%;
