@@ -118,6 +118,69 @@ h6 {
   padding: 0 0.9375rem;
 }
 
+.checkbox {
+  position: relative;
+}
+
+.checkbox:not(:last-child) {
+  margin-bottom: 0.3125em;
+}
+
+.checkbox__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkbox__input:checked + .checkbox__label:after {
+  -webkit-transform: translateY(-50%) scale(1);
+      -ms-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
+}
+
+.checkbox__label {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  gap: 10px;
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+}
+
+.checkbox__label:before {
+  content: "";
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+}
+
+.checkbox__label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(0);
+      -ms-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
+  background-color: #ffdc18;
+  width: 10px;
+  height: 10px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
 [class*=-ibg] {
   position: relative;
 }
@@ -415,6 +478,23 @@ img {
 
 .top-page__img {
   margin-right: -10%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+@supports (width: clamp( 15.625rem , 0.1610824742rem  +  77.3195876289vw , 62.5rem )) {
+  .top-page__img {
+    width: clamp( 15.625rem , 0.1610824742rem  +  77.3195876289vw , 62.5rem );
+  }
+}
+
+@supports not (width: clamp( 15.625rem , 0.1610824742rem  +  77.3195876289vw , 62.5rem )) {
+  .top-page__img {
+    width: calc(15.625rem + 46.875 * (100vw - 20rem) / 60.625);
+  }
 }
 
 .button {
@@ -475,17 +555,82 @@ img {
   display: -ms-grid;
   display: grid;
   gap: 35px;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
   margin-bottom: 3.75rem;
 }
 
 .link {
   margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .link:hover {
   text-decoration: underline;
+}
+
+.popup {
+  overflow: scroll;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+      -ms-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 40px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.popup.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.popup__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  max-width: 23.125rem;
+  line-height: 1.2;
+}
+
+@supports (margin-right: clamp( 0.0000000625rem , -3.7113401231rem  +  18.5567009278vw , 11.25rem )) {
+  .popup__title {
+    margin-right: clamp( 0.0000000625rem , -3.7113401231rem  +  18.5567009278vw , 11.25rem );
+  }
+}
+
+@supports not (margin-right: clamp( 0.0000000625rem , -3.7113401231rem  +  18.5567009278vw , 11.25rem )) {
+  .popup__title {
+    margin-right: calc(0.0000000625rem + 11.2499999375 * (100vw - 20rem) / 60.625);
+  }
+}
+
+.popup__form {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  padding: 68px 40px;
+}
+
+.input {
+  background-color: #e5ecfb;
+  color: #c4d4f5;
+  padding: 26px 30px;
+  border-radius: 20px;
+}
+
+.checkbox__label a {
+  text-decoration: underline;
+}
+
+@media (min-width: 47.99875em) {
+  .examples-page__examples {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 61.99875em) {
@@ -530,9 +675,5 @@ img {
 
   .top-page__item {
     gap: 17px;
-  }
-
-  .examples-page {
-    display: none;
   }
 }
