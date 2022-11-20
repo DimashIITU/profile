@@ -487,6 +487,7 @@ img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+  z-index: 3;
 }
 
 @supports (width: clamp( 15.625rem , 0.1610824742rem  +  77.3195876289vw , 62.5rem )) {
@@ -501,8 +502,12 @@ img {
   }
 }
 
+.top-page__img img {
+  z-index: 3;
+}
+
 .button {
-  padding: 28px 38px;
+  padding: 8px 38px;
   color: #000;
   display: -ms-grid;
   display: grid;
@@ -526,8 +531,6 @@ img {
 }
 
 .examples-page__container {
-  display: -ms-grid;
-  display: grid;
   justify-items: center;
 }
 
@@ -560,10 +563,14 @@ img {
   display: grid;
   gap: 35px;
   margin-bottom: 3.75rem;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .link {
+  display: block;
   text-align: center;
+  margin-bottom: 1.25rem;
 }
 
 .link:hover {
@@ -634,10 +641,81 @@ img {
   text-decoration: underline;
 }
 
+.button_sum {
+  padding: 25px 38px;
+}
+
+.button__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.examples-page__slider {
+  margin-bottom: 1.875rem;
+}
+
+.examples-page__slide {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.swiper-vertical .swiper-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.swiper-autoheight .swiper-wrapper {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.swiper-initialized .swiper-slide {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.swiper-android .swiper-slide,
+.swiper-android .swiper-wrapper {
+  -webkit-transform: translate3d(0px, 0, 0);
+          transform: translate3d(0px, 0, 0);
+}
+
+.swiper-button-lock {
+  display: none !important;
+}
+
 @media (min-width: 47.99875em) {
-  .examples-page__examples {
-    -ms-grid-columns: (1fr)[3];
-    grid-template-columns: repeat(3, 1fr);
+  .examples-page__container {
+    display: -ms-grid;
+    display: grid;
+  }
+
+  .examples-page__slider {
+    display: none;
   }
 }
 
@@ -683,5 +761,9 @@ img {
 
   .top-page__item {
     gap: 17px;
+  }
+
+  .examples-page__examples {
+    display: none;
   }
 }
