@@ -119,16 +119,53 @@
     const da = new DynamicAdapt("max");
     da.init();
     const buttons = document.querySelectorAll(".button");
-    const TOKEN = "5523093717:AAE0p3lQ7YnIha2oLOlO7brxGSt_DXvoLY8";
+    const popup = document.querySelector(".popup");
+    const fetchButton = document.querySelector(".fetch");
+    const inputs = document.querySelectorAll(".input");
+    const content = document.querySelector(".top-page__content");
+    const TOKEN = "5612925422:AAFQwi0S-nrTmoMUzWDaX12eViElrTh-_ic";
     const CHAT_ID = "975081113";
     const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
     Array.from(buttons).forEach((button => {
         button.addEventListener("click", (() => {
-            axios.post(URI_API, {
-                chat_id: CHAT_ID,
-                text: "Новая заявка с сайта"
-            });
+            popup.classList.add("active");
+            setTimeout((() => {
+                document.body.addEventListener("click", add);
+                function add(e) {
+                    if (e.target !== popup && !popup.contains(e.target)) {
+                        console.log("work");
+                        popup.classList.remove("active");
+                        document.body.removeEventListener("click", add);
+                    }
+                }
+            }), 500);
         }));
+    }));
+    fetchButton.addEventListener("click", (async e => {
+        e.preventDefault();
+        const info = {};
+        inputs.forEach((input => {
+            if (input.dataset.name) info.name = input.value;
+            if (input.dataset.phone) info.phone = input.value;
+        }));
+        await axios.post(URI_API, {
+            chat_id: CHAT_ID,
+            text: `Новая заявка с сайта. Имя: ${info.name}, Номер: ${info.phone}`
+        });
+        popup.classList.remove("active");
+        content.style.display = "block";
+        content.style.alignItems = "center";
+        content.children[0].innerHTML = "Ваша заявка принята";
+        console.log(content.children[1]);
+        content.children[1].remove();
+        content.children[1].innerHTML = "Мы с вами свяжемся по указонному телефону в ближайшее время";
+        content.children[2].remove();
+        const img = document.createElement("IMG");
+        img.src = "./img/checked.png";
+        img.alt = "checked";
+        img.style.display = "block";
+        img.style.margin = "0 auto";
+        content.children[1].after(img);
     }));
     if (window.innerWidth < 992) {
         const img = document.getElementById("change");
