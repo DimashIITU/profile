@@ -124,7 +124,7 @@
     const inputs = document.querySelectorAll(".input");
     const content = document.querySelector(".top-page__content");
     const TOKEN = "5612925422:AAFQwi0S-nrTmoMUzWDaX12eViElrTh-_ic";
-    const CHAT_ID = "975081113";
+    const CHAT_ID = "1900995195";
     const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
     Array.from(buttons).forEach((button => {
         button.addEventListener("click", (() => {
