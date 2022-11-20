@@ -279,6 +279,10 @@ h6 {
   }
 }
 
+.page__examples {
+  margin-bottom: 2.5rem;
+}
+
 @supports (padding-top: clamp( 1.875rem , 1.1327319588rem  +  3.7113402062vw , 4.125rem )) {
   .page__examples {
     padding-top: clamp( 1.875rem , 1.1327319588rem  +  3.7113402062vw , 4.125rem );
@@ -559,12 +563,16 @@ img {
 }
 
 .link {
-  margin-bottom: 2.5rem;
   text-align: center;
 }
 
 .link:hover {
   text-decoration: underline;
+}
+
+.fot {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .popup {
